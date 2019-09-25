@@ -1,0 +1,65 @@
+The Racket Reference => Dokumentáció
+
+1
+3.14
+6.02e+23
+999999999999999999999999999
+1/2
+1+2i
+
+#t (true)
+#f (false)
+
+"Hódmezővásárhely"
+
+()[]{}",';#\| => Speciális szimbólumok
+
+(define <id> <expr>)
+
+(define (<id> <id>*) <expr>+)
+
+függvényhívás:
+(<id> <expr>)
+
+REPL => Read,Eval,Print,Loop
+
+equal? => tipikusan nem számokra használt összehasonlító függvény
+
+type? => A megadott érték adott típúsú-e
+
+string-length => String hossza
+
+string-append => Egymás után fűzi a paramétereket
+
+substring => Első paramétere a string, a második paraméter hogy hanyadik karaktertől,
+a harmadik pedig hogy hanyadik karakterig akarjuk(0-tól kezdődik a karakterek számozása). Az első benne lesz, az utolsó már nem.
+
+sqrt => Négyzetgyök vonás
+
+(if <expr> <expr> <expr>)
+
+(and <expr>*)
+(or <expr>*)
+(not <expr>)
+
+Névtelen függvény
+(lambda (<id>+[paraméterek]) <expr>+)
+
+Házi feladat:
+Hatványozó függvény (my-pow) (rekurzív)
+faktoriális
+Fibonacchi sorozat n-edik eleme
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Redex -> Reducible expression -> Redukálható (rész)kifejezés -> Az a része a kifejezésnek, ami egy egyszerű lépésben kiértékelhető
+Continuation -> Folytatás -> Ami a redexet körbeveszi.
+
+(- 4 (+ 1 1))
+redex: (+ 1 1)
+Continuation: (-4 [redex eredmenye])
+
+tail position -> farok pozíció
+
+Az expr1 kifejezés farok pozícióban van egy őt magában foglaló expr2 kifejezésre nézve, ha valahányszor expr1 redexé válik, az ő folytatása
+(continuation) megegyezik az őt tartalmazó expr2 folytatásával(Continuation-jével).

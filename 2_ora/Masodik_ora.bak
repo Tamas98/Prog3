@@ -1,0 +1,35 @@
+#lang racket
+
+(+ 3 4)
+
+(- 2 1)
+
+(* 2 3)
+
+(/ 6 2)
+
+(/ 10 3)
+
+(remainder 6 4)
+
+(quotient 6 4)
+
+(= 1 2)
+
+(= 2 2)
+
+(<= 2 3)
+
+(>= 1 2)
+
+(equal? "Hello" "Hello")
+
+(number? 5)
+
+(string? "2")
+
+(string-length "Hello There")
+
+(string-append "Hello" "There" "!")
+
+(substring "Hello There" 0 5)
