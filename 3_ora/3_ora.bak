@@ -1,0 +1,25 @@
+#lang racket
+
+(require racket/trace)
+
+(define (faktorialis n)
+  (if (= n 1)
+      1
+      (* n (faktorialis (- n 1)))))
+
+
+(trace faktorialis)
+(faktorialis 5)
+
+(define (farok-factorial n eredmeny)
+  (if (zero? n) eredmeny
+      (farok-factorial (- n 1) (* n eredmeny))))
+
+"-----------------------------------------------"
+
+#;(trace farok-factorial)
+(farok-factorial 5 1)
+
+
+
+(time (farok-factorial 100000 1))
