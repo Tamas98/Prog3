@@ -47,5 +47,7 @@
 
 (define (tf n fi fip1) ;Tail Fibonnachi
   (if (< n 3)
-      1 ;???????
+      fip1 ;???????
       (tf (- n 1) fip1 (+ fi fip1))))
+
+(tf 30 1 1)

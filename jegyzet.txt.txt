@@ -63,3 +63,5 @@ tail position -> farok pozíció
 
 Az expr1 kifejezés farok pozícióban van egy őt magában foglaló expr2 kifejezésre nézve, ha valahányszor expr1 redexé válik, az ő folytatása
 (continuation) megegyezik az őt tartalmazó expr2 folytatásával(Continuation-jével).
+
+C -> Continuation
