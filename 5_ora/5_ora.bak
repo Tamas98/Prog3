@@ -1,0 +1,8 @@
+#lang racket
+
+(cons 1 2)
+(pair? (cons 1 2))
+(pair? 2)
+(pair? (cons "ads" "asd"))
+(pair? '(1 . 2))
+(pair? '(1 2))

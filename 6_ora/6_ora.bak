@@ -1,0 +1,11 @@
+#lang racket
+
+(map (lambda (number)
+       (+ number 1))
+     '(1 2 3 4 ))
+
+(map (lambda (a b) #! Elemek összeadása lambda-val
+     (+ a b))
+     '(1 2 3 4) '(8 7 6 5))
+
+(map + '(1 2 3 4) '(8 7 6 5) '(1 1 1 1)) #! Elemek öösszeadása egyszerűbben
