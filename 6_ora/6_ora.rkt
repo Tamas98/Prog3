@@ -43,3 +43,25 @@
 
 (remove* '(1 2) '(1 2 3 2 4 2 5 2)) 
 
+(sort '(1 3 5 2 11 6 3 4 7 4 5 10) <)
+
+(sort '("Hello" "idegen" "mond" "most" "mi" "legyen") string<?)
+
+(sort #:key car '((8 "Miskolc") (2) (7) (10) (15) (4) (2 "Debrecen") (5) (3) (14) (17)) < )
+
+(sort #:key car '((8 "Miskolc") (2) (7) (10) (15) (4) (2 "Debrecen") (5) (3) (14) (17)) < #:cache-keys? #t)
+
+(member 2 '(1 3 5 2 11 6 3 4 7 4 5 10) <)
+
+(memf (lambda (n) (> n 9)) '(1 3 5 2 11 6 3 4 7 4 5 10))
+
+(findf (lambda (n) (> n 9)) '(1 3 5 2 8 6 3 4 7 4 5 6))
+
+(assoc 6 '((1 "Debrecen") (3 "Miskolc") (3 "BudaPest") (4 "Szöged") (5 "Kótaly")))
+
+(assf (lambda (n) (> n 9)) '((1 1) (2 3) (21 5) (2 2) (20 11) (6 1) (1 3)))
+
+(car (car '((1 2) (2 3))))
+(caar '((1 2) (2 3)))
+
+(cdadar '((1 ((3 (4 5)) 2))))
